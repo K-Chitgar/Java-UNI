@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Tamrin13 {
     public static void main(String[] args) {
-        float a, b, c, d, e, f, x, y;
+        float a, b, c, d, e, f, x, y, w;
         Scanner intput = new Scanner(System.in);
         System.out.print("Enter a in (ax+by=e): ");
         a = intput.nextInt();
@@ -23,9 +23,14 @@ public class Tamrin13 {
 
         x = (e*d - b*f) / (a*d - b*c);
         y = (a*f - e*c) / (a*d - b*c);
+        w = (a*d - b*c);
 
-
-        System.out.println("x = " + x);
-        System.out.println("y = " + y);
+        if (w == 0){
+            System.out.println("moadaele javab nadarad");
+        }
+        else {
+            System.out.println("x = " + x);
+            System.out.println("y = " + y);
+        }
     }
 }
